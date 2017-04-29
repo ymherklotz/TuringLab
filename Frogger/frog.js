@@ -23,6 +23,17 @@ function Frog(x, y, size)
         return false;
     }
 
+    this.intersectCoord=function(x, y, width, height)
+    {
+        if(this.x+this.size/2>x && this.x+this.size/2<x+width &&
+           this.y+this.size/2>y && this.y+this.size/2<y+height)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     this.moveUp=function()
     {
         this.y-=this.size;

@@ -10,6 +10,9 @@ var frog;
 var road;
 var river;
 
+// check game over
+var game_over;
+
 // functions
 
 function setup()
@@ -20,6 +23,7 @@ function setup()
     tile_size=50;
     road=[];
     river=[];
+    game_over=false;
 
     // create the canvas with the right dimensions
     createCanvas(16*tile_size, 15*tile_size);
@@ -61,29 +65,50 @@ function draw()
     {
         if(frog.intersect(road[i]))
         {
-            gameOver();
+            game_over=true;
         }
         
         road[i].move(width);
         road[i].draw();
     }
 
+    var touch_log=false;
+
     for(var i=0; i<river.length; i++)
     {
         if(frog.intersect(river[i]))
         {
             frog.x+=river[i].speed;
+            touch_log=true;
         }
         
         river[i].move(width);
         river[i].draw();
     }
-    
+
+    if(!touch_log && frog.intersectCoord(0, tile_size, width, 5*tile_size))
+    {
+        game_over=true;
+    }
+
     frog.draw();
+
+    if(game_over)
+    {
+        fill(255, 0, 0);
+        textSize(75);
+        textAlign(CENTER, CENTER);
+        textStyle(BOLD);
+        text("Game Over!", width/2, height/2);
+        noLoop();
+    }
 }
 
 function gameOver()
 {
+    fill(255, 0, 0);
+    textSize(50);
+    text("Game Over!", width/2, height/2);
     noLoop();
 }
 
