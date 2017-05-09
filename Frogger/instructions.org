@@ -35,7 +35,6 @@
 
 ** Step 7
    Call your the frog's draw function in the main draw function and the frog should then be displayed on the screen.
-
 * Make the frog move
 
 ** Step 1
@@ -52,7 +51,7 @@
    You can then check which key has been pressed by using the keyCode variable, that contains the current key being pressed.
 
 *** Hint
-    Use if statements to check if the desired key has been pressed
+    Use if statements to check if the desired key has been pressed.
 
     #+BEGIN_SRC javascript
       function keyPressed()
@@ -64,5 +63,24 @@
       } 
     #+END_SRC
 
+** Step 5
+   You should now be able to move the frog around on the screen.
 * Create the road and cars
 
+** Step 1
+   The first step is to draw the road. For that just draw the rectangle at the desired position.
+   The lane size should be equal to the size of the frog.
+
+** Step 2
+   Now open the _car.js_ file and create a Constructor for a car that will take the x position, y position, 
+   width, height and speed as parameters.
+
+** Step 3
+   Create member variables for these input parameters.
+
+** Step 4
+   We now need a `move()` and a `draw()` function for the car to update its position and draw it to the screen.
+
+** Step 5
+   
+   
