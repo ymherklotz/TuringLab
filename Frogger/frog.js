@@ -16,7 +16,7 @@ function Frog(x, y, size)
     // member functions
     this.draw=function()
     {
-        fill(255, 0, 0);
+        fill("#57a03d");
         // body
         rect(this.x+this.size*3/10, this.y+this.size*2/5, this.size*2/5, this.size/5);
         ellipse(this.x+this.size/2, this.y+this.size*2/5, this.size*2/5, this.size*3/5);
@@ -52,6 +52,13 @@ function Frog(x, y, size)
         }
 
         return false;
+    }
+
+    this.resetPosition=function()
+    {
+        this.y=y;
+        this.size=size;
+        this.direction=direction.UP;
     }
 
     this.moveUp=function()

@@ -10,6 +10,9 @@ var frog;
 var road;
 var river;
 
+// score
+var score;
+
 // check game over
 var game_over;
 
@@ -24,6 +27,7 @@ function setup()
     road=[];
     river=[];
     game_over=false;
+    score=0;
 
     // create the canvas with the right dimensions
     createCanvas(16*tile_size, 15*tile_size);
@@ -51,14 +55,14 @@ function setup()
 
 function draw()
 {
-    background(0);
+    background("#2f2f2f");
 
     // draws the road
     fill(127);
     rect(0, 7*tile_size, width, 5*tile_size);
     
     // draw the river
-    fill(0, 0, 255);
+    fill("#3498dc");
     rect(0, tile_size, width, 5*tile_size);
 
     for(var i=0; i<road.length; i++)
@@ -90,6 +94,18 @@ function draw()
     {
         game_over=true;
     }
+
+    if(frog.intersectCoord(0, 0, width, tile_size))
+    {
+        frog.resetPosition();
+        score+=100;
+    }
+
+    // draw score
+    fill("#8f8f8f");
+    textSize(30);
+    textAlign(LEFT, CENTER);
+    text("Score: "+score, 0, 14*tile_size);
 
     frog.draw();
 

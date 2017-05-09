@@ -24,7 +24,7 @@ function Log(x, y, width, height, speed)
 
     this.draw=function()
     {
-        fill(165,42,42)
+        fill("#5a2a27")
         rect(this.x, this.y+5, this.width, this.height-10);
         ellipse(this.x, this.y+this.height/2, 30, this.height-10);
         ellipse(this.x+this.width, this.y+this.height/2, 30, this.height-10);        
