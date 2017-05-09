@@ -1,0 +1,36 @@
+#+TITLE: Instructions
+#+DATE: <2017-05-09 Tue>
+#+AUTHOR: Yann Herklotz
+#+EMAIL: ymherklotz@gmail.com
+
+* Create the frog
+
+Open the frog.js file in the project folder. Access the project folder by clicking the arrow underneath the play button.
+
+Write a Constructor called `Frog()` to _frog.js_. It should take the x position, y position and size of the frog as input parameters.
+
+Add the following properties to the class: 
+- x position
+- y positionHints
+- size
+
+Create a member function called `draw()` for the frog that will draw a frog at its current position.
+
+Go back into the _sketch.js_ file and create a variable that will hold the size of the frog called `tile_size`. This variable will also be used
+to create the road, the cars, the logs and the river, as they all have to correspond to that size.
+
+Now create the frog object and initalize it using the Constructor you wrote.
+
+Call your the frog's draw function in the main draw function and the frog should then be displayed on the screen.
+
+* Make the frog move
+
+We want to make the frog jump around, so for that, we are going to create four functions that will make the frog jump in the four different directions.
+
+Go backk into your 
+
+Go back into your sketch.js file and create a function called keyPressed(). This function will be called once a key is pressed.
+You can then check which key has been pressed by using the keyCode variable, that contains the current key being pressed.
+
+* Create the road and cars
+
