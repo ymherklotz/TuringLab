@@ -25,12 +25,35 @@ Call your the frog's draw function in the main draw function and the frog should
 
 * Make the frog move
 
-We want to make the frog jump around, so for that, we are going to create four functions that will make the frog jump in the four different directions.
+** Step 1
+   We want to make the frog jump around, so for that, we are going to create four functions that will make the frog jump in the four different directions.
 
-Go backk into your 
+** Step 2
+   Go back into your _frog.js_ file and add a function called `moveUp()`, which will move the frog according to it's size.
 
-Go back into your sketch.js file and create a function called keyPressed(). This function will be called once a key is pressed.
-You can then check which key has been pressed by using the keyCode variable, that contains the current key being pressed.
+** Step 3
+   Now repeat that for the three other directions.
+
+** Step 4
+   Go back into your sketch.js file and create a function called keyPressed(). This function will be called once a key is pressed.
+   You can then check which key has been pressed by using the keyCode variable, that contains the current key being pressed.
+
+*** Hint
+    Use if statements to check if the desired key has been pressed
+
+    #+BEGIN_SRC javascript
+
+      function keyPressed()
+      {
+          if(/*condition*/)
+          {
+              // move frog in the direction
+          }
+      }
+          
+    #+END_SRC
+
+   
 
 * Create the road and cars
 
