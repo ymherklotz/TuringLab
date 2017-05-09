@@ -42,15 +42,13 @@ Call your the frog's draw function in the main draw function and the frog should
     Use if statements to check if the desired key has been pressed
 
     #+BEGIN_SRC javascript
-
       function keyPressed()
       {
           if(/*condition*/)
           {
               // move frog in the direction
           }
-      }
-          
+      } 
     #+END_SRC
 
    
