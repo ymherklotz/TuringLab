@@ -5,23 +5,36 @@
 
 * Create the frog
 
-Open the frog.js file in the project folder. Access the project folder by clicking the arrow underneath the play button.
+** Step 1
+   Open the frog.js file in the project folder. Access the project folder by clicking the arrow underneath the play button.
 
-Write a Constructor called `Frog()` to _frog.js_. It should take the x position, y position and size of the frog as input parameters.
+** Step 2
+   Write a Constructor called `Frog()` to _frog.js_. It should take the x position, y position and size of the frog as input parameters.
 
-Add the following properties to the class: 
+** Step 3
+   Add the following properties to the class:
 - x position
 - y positionHints
 - size
 
-Create a member function called `draw()` for the frog that will draw a frog at its current position.
+** Step 4
+   Create a member function called `draw()` for the frog that will draw a frog at its current position.
 
-Go back into the _sketch.js_ file and create a variable that will hold the size of the frog called `tile_size`. This variable will also be used
-to create the road, the cars, the logs and the river, as they all have to correspond to that size.
+** Step 5
+   Go back into the _sketch.js_ file and create a variable that will hold the size of the frog called `tile_size`. This variable will also be used
+   to create the road, the cars, the logs and the river, as they all have to correspond to that size.
 
-Now create the frog object and initalize it using the Constructor you wrote.
+** Step 6
+   Now create the frog object and initalize it using the Constructor you wrote.
 
-Call your the frog's draw function in the main draw function and the frog should then be displayed on the screen.
+*** Hint
+    Creating an object
+    #+BEGIN_SRC javascript
+      var object=ObjectConstructor(arg1, arg2, ...);    
+    #+END_SRC
+
+** Step 7
+   Call your the frog's draw function in the main draw function and the frog should then be displayed on the screen.
 
 * Make the frog move
 
@@ -50,8 +63,6 @@ Call your the frog's draw function in the main draw function and the frog should
           }
       } 
     #+END_SRC
-
-   
 
 * Create the road and cars
 
