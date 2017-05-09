@@ -30,7 +30,7 @@
 *** Hint
     Creating an object
     #+BEGIN_SRC javascript
-      var object=ObjectConstructor(arg1, arg2, ...);    
+      var object=ObjectConstructor(arg1, arg2, ...);
     #+END_SRC
 
 ** Step 7
@@ -79,8 +79,12 @@
    Create member variables for these input parameters.
 
 ** Step 4
-   We now need a `move()` and a `draw()` function for the car to update its position and draw it to the screen.
+   We now need a `move()` and a `draw()` member function for the car to update its position and draw it to the screen.
 
 ** Step 5
-   
+   Check if the Car constructor works by creating an object and drawing it in the draw function.
+
+* Multiple cars in lanes
+
+** Step 1
    
