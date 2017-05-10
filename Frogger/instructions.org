@@ -4,55 +4,55 @@
 #+EMAIL: ymherklotz@gmail.com
 
 * Create the frog
-
+  
 ** Step 1
    Open the frog.js file in the project folder. Access the project folder by clicking the arrow underneath the play button.
-
+   
 ** Step 2
    Write a Constructor called `Frog()` to _frog.js_. It should take the x position, y position and size of the frog as input parameters.
-
+   
 ** Step 3
    Add the following properties to the class:
 - x position
 - y positionHints
 - size
-
+  
 ** Step 4
    Create a member function called `draw()` for the frog that will draw a frog at its current position.
-
+   
 ** Step 5
    Go back into the _sketch.js_ file and create a variable that will hold the size of the frog called `tile_size`. This variable will also be used
    to create the road, the cars, the logs and the river, as they all have to correspond to that size.
-
+   
 ** Step 6
    Now create the frog object and initalize it using the Constructor you wrote.
-
+   
 *** Hint
     Creating an object
     #+BEGIN_SRC javascript
       var object=ObjectConstructor(arg1, arg2, ...);
     #+END_SRC
-
+    
 ** Step 7
    Call your the frog's draw function in the main draw function and the frog should then be displayed on the screen.
 * Make the frog move
-
+  
 ** Step 1
    We want to make the frog jump around, so for that, we are going to create four functions that will make the frog jump in the four different directions.
-
+   
 ** Step 2
    Go back into your _frog.js_ file and add a function called `moveUp()`, which will move the frog according to it's size.
-
+   
 ** Step 3
    Now repeat that for the three other directions.
-
+   
 ** Step 4
    Go back into your sketch.js file and create a function called keyPressed(). This function will be called once a key is pressed.
    You can then check which key has been pressed by using the keyCode variable, that contains the current key being pressed.
-
+   
 *** Hint
     Use if statements to check if the desired key has been pressed.
-
+    
     #+BEGIN_SRC javascript
       function keyPressed()
       {
@@ -62,29 +62,53 @@
           }
       } 
     #+END_SRC
-
+    
 ** Step 5
    You should now be able to move the frog around on the screen.
 * Create the road and cars
-
+  
 ** Step 1
    The first step is to draw the road. For that just draw the rectangle at the desired position.
    The lane size should be equal to the size of the frog.
-
+   
 ** Step 2
    Now open the _car.js_ file and create a Constructor for a car that will take the x position, y position, 
    width, height and speed as parameters.
-
+   
 ** Step 3
    Create member variables for these input parameters.
-
+   
 ** Step 4
    We now need a `move()` and a `draw()` member function for the car to update its position and draw it to the screen.
 
 ** Step 5
-   Check if the Car constructor works by creating an object and drawing it in the draw function.
+   The move function should make the car move using it's speed and wrap around when it reaches the side of the screen.
 
-* Multiple cars in lanes
+** Step 6: Think
+   How would you make the cars wrap around the screen even though they could be going in two directions.
 
-** Step 1
+*** Hint
+    Use an if statement to determine the direction.
    
+   
+** Step 7
+   Check if the Car constructor works by creating an object and drawing it in the draw function.
+   
+* Multiple cars in lanes
+  
+** Step 1
+   Create an array called `road` that will hold all the cars in the different lanes.
+   
+*** Hint
+    An array can be created using the following syntax
+    
+    #+BEGIN_SRC javascript
+      function setup()
+      {
+          var array=[];
+          array.push("Hello");
+      }
+    #+END_SRC
+    
+** Step 2
+   You can use a `for` loop to `push` the cars to the array, by changing the y value of the cars.
