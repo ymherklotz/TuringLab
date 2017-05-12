@@ -131,7 +131,7 @@
    
 ** Step 2
    Use this function to check if the center of the frog intersects with any part of the object.
-
+   
 *** Hint
     Use the object's x, y, width and height to determine if the it intersects.
 
