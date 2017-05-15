@@ -5,24 +5,46 @@
 
 * Create the frog
   
+** Instruction
+   
+   Using everything you have learned until now, we are going to make a game similar to 
+   Crossy Road. The first step is to create a Frog that the player will control to
+   cross a road and a river.
+   
 ** Step 1
-   Open the frog.js file in the project folder. Access the project folder by clicking the arrow underneath the play button.
+   Open the frog.js file in the project folder. Access the project folder by clicking the 
+   arrow underneath the play button.
    
 ** Step 2
-   Write a Constructor called `Frog` to _frog.js_. It should take the x position, y position and size of the frog as input parameters.
+   Write a Constructor called `Frog` to _frog.js_. It should take the x position, y position 
+   and size of the frog as input parameters.
    
+*** Hint
+    #+BEGIN_SRC javascript
+      function Constructor(Param1, Param2, ...)
+      {
+          // code
+      }   
+    #+END_SRC
+    
 ** Step 3
    Add the following properties to the class:
 - x position
 - y positionHints
 - size
   
+*** Hint
+    Use the `this` keyword
+    
 ** Step 4
-   Create a member function called `draw` for the frog that will draw a frog at its current position.
+   Create a member function called `draw` for the frog that will draw a frog at
+   its current position.
    
 ** Step 5
-   Go back into the _sketch.js_ file and create a variable that will hold the size of the frog called `tile_size`. This variable will also be used
-   to create the road, the cars, the logs and the river, as they all have to correspond to that size.
+   Go back into the _sketch.js_ file and create a variable that will hold the size of 
+   the frog called `tile_size`. This variable will also be used
+   to create the road, the cars, the logs and the river, as they all have 
+   to correspond to that size.
    
 ** Step 6
    Now create the frog object and initalize it using the Constructor you wrote.
@@ -34,21 +56,26 @@
     #+END_SRC
     
 ** Step 7
-   Call your the frog's draw function in the main draw function and the frog should then be displayed on the screen.
+   Call your the frog's draw function in the main draw function and the frog should 
+   then be displayed on the screen.
+   
 * Make the frog move
   
 ** Step 1
-   We want to make the frog jump around, so for that, we are going to create four functions that will make the frog jump in the four different directions.
+   We want to make the frog jump around, so for that, we are going to create four 
+   functions that will make the frog jump in the four different directions.
    
 ** Step 2
-   Go back into your _frog.js_ file and add a function called `moveUp`, which will move the frog according to it's size.
+   Go back into your _frog.js_ file and add a function called `moveUp`, which 
+   will move the frog according to it's size.
    
 ** Step 3
    Now repeat that for the three other directions.
    
 ** Step 4
-   Go back into your sketch.js file and create a function called keyPressed. This function will be called once a key is pressed.
-   You can then check which key has been pressed by using the keyCode variable, that contains the current key being pressed.
+   Go back into your _sketch.js_ file and create a function called `keyPressed()`. 
+   This function will be called once a key is pressed. You can then check which key has 
+   been pressed by using the `keyCode` variable, that contains the current key being pressed.
    
 *** Hint
     Use if statements to check if the desired key has been pressed.
@@ -72,25 +99,28 @@
    The lane size should be equal to the size of the frog.
    
 ** Step 2
-   Now open the _car.js_ file and create a Constructor for a car that will take the x position, y position, 
-   width, height and speed as parameters.
+   Now open the _car.js_ file and create a Constructor for a car that will take the x 
+   position, y position, width, height and speed as parameters.
    
 ** Step 3
    Create member variables for these input parameters.
    
 ** Step 4
-   We now need a `move` and a `draw` member function for the car to update its position and draw it to the screen.
-
+   We now need a `move` and a `draw` member function for the car to update its position 
+   and draw it to the screen.
+   
 ** Step 5
-   The move function should make the car move using it's speed and wrap around when it reaches the side of the screen.
-
+   The move function should make the car move using it's speed and wrap around when it 
+   reaches the side of the screen.
+   
 ** Step 6: Think
-   How would you make the cars wrap around the screen even though they could be going in two directions.
-
+   How would you make the cars wrap around the screen even though they could be going in 
+   two directions.
+   
 *** Hint
     Use an if statement to determine the direction.
-   
-   
+    
+    
 ** Step 7
    Check if the Car constructor works by creating an object and drawing it in the draw function.
    
@@ -111,29 +141,33 @@
     #+END_SRC
     
 ** Step 2
-   You can use a `for` loop to `push` the cars to the array, by changing the y value of the cars. You can 
-   also change the x value of cars in the same lane to have multiple cars in that lane.
-
+   You can use a `for` loop to `push` the cars to the array, by changing the y value of 
+   the cars. You can also change the x value of cars in the same lane to have multiple cars 
+   in that lane.
+   
 ** Step 3
-   Now use the `road` array to draw all the cars to the screen in the draw function. You can use a for loop
-   for this.
-
+   Now use the `road` array to draw all the cars to the screen in the draw function. 
+   You can use a for loop for this.
+   
 ** Step 4
-   You should now be able to see the cars. Now add code to make the cars move using the speed you gave them.
-
+   You should now be able to see the cars. Now add code to make the cars move using the 
+   speed you gave them.
+   
 ** Step 5 Think
    How would you add different colours to the cars?
-
+   
 * Collision detection
-
+  
 ** Step 1
-   In your frog constructor, add a member function called `intersect` that will take an object, like a car, as a parameter.
+   In your frog constructor, add a member function called `intersect` that will take an object, 
+   like a car, as a parameter.
    
 ** Step 2
    Use this function to check if the center of the frog intersects with any part of the object.
    
 *** Hint
     Use the object's x, y, width and height to determine if the it intersects.
-
+    
 ** Step 3
-   
+   If it is intersecting, make the function return `true`, otherwise the function should
+   return `false`.

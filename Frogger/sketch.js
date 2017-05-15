@@ -105,7 +105,7 @@ function draw()
     fill("#8f8f8f");
     textSize(30);
     textAlign(LEFT, CENTER);
-    text("Score: "+score, 0, 14*tile_size);
+//    text("Score: "+score, 0, 14*tile_size);
 
     frog.draw();
 
@@ -118,14 +118,6 @@ function draw()
         text("Game Over!", width/2, height/2);
         noLoop();
     }
-}
-
-function gameOver()
-{
-    fill(255, 0, 0);
-    textSize(50);
-    text("Game Over!", width/2, height/2);
-    noLoop();
 }
 
 function keyPressed()
