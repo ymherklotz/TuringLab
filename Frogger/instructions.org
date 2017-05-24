@@ -3,8 +3,7 @@
 #+AUTHOR: Yann Herklotz
 #+EMAIL: ymherklotz@gmail.com
 
-* Create the frog
-  
+* Create the frog  
 ** Instruction
    
    Using everything you have learned until now, we are going to make a game similar to 
@@ -24,7 +23,7 @@
       function Constructor(Param1, Param2, ...)
       {
           // code
-      }   
+      }
     #+END_SRC
     
 ** Step 3
@@ -39,7 +38,7 @@
 ** Step 4
    Create a member function called `draw` for the frog that will draw a frog at
    its current position.
-   
+   zz
 ** Step 5
    Go back into the _sketch.js_ file and create a variable that will hold the size of 
    the frog called `tile_size`. This variable will also be used
@@ -171,3 +170,5 @@
 ** Step 3
    If it is intersecting, make the function return `true`, otherwise the function should
    return `false`.
+* Add a river with logs
+
